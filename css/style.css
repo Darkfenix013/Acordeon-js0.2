@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/*
+
+  Si quieres saber cada línea de este archivo te recomiendo que veas estos vídeos:
+  👉 Reset CSS: https://youtu.be/bXqPNoYFK8w
+  👉 Reset PRO en Código: https://www.youtube.com/watch?v=bXqPNoYFK8w    
+
+    Estilos generales para que las etiquetas no contengan propiedades
+    que nos estorben y en todos los navegadores se vean correctamente
+*/
+:root {
+  --negro: #393939;
+  --blanco: #ececec;
+  --sombra-ppal: #c9c9c9;
+  --sombra-sec: #ffffff;
+  --borde-negro: #00000050;
+  --bg: hsl(273, 75%, 66%);
+  --marcado: rgb(127, 195, 255);
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+a {
+  display: block;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+  color: inherit;
+  appearance: none;
+}
+
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+body {
+  font-family: var(--tipo-principal);
+  font-size: 100%;
+  line-height: 1.4em;
+  min-height: 100vh;
+  background-color: var(--blanco);
+  color: var(--negro);
+  hyphens: auto;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+:root {
+  --negro: #393939;
+  --blanco: #ececec;
+  --sombra-ppal: #c9c9c9;
+  --sombra-sec: #ffffff;
+  --borde-negro: #00000050;
+  --bg: hsl(273, 75%, 66%);
+  --marcado: rgb(127, 195, 255);
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.hero__data-container {
+  background-color: var(--blanco);
+  margin: 1.5em;
+  border-radius: 25px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0;
+}
+.hero__data-container .container-img img {
+  width: 250px;
+  position: absolute;
+  top: -7em;
+  left: 2em;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 6em;
+}
+
+.acordeon {
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: 0.8em 0.8em 1.6em var(--sombra-ppal), -0.8em -0.8em 1.6em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  margin: 1.5em;
+}
+.acordeon .pregunta {
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid hsl(240deg, 6%, 50%);
+  cursor: pointer;
+}
+.acordeon .pregunta img {
+  width: 0.7em;
+  height: 0.7em;
+}
+
+.respuesta {
+  height: 0;
+  overflow: hidden;
+}
+
+.bloque:hover {
+  border-bottom: 0;
+}
+
+.bloque:hover img {
+  transform: rotateX(-180deg);
+  transition: all 0.5s ease;
+}
+
+.bloque:hover .respuesta {
+  height: 6em;
+  transition: all 0.5s ease;
+  padding: auto;
+  font-size: 0.8em;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: 0.8em 0.8em 1.6em var(--sombra-ppal), -0.8em -0.8em 1.6em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  border-bottom: 1px solid hsl(240deg, 6%, 50%);
+}
+
+/*# sourceMappingURL=style.css.map */
