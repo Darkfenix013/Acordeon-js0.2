@@ -9,4 +9,4 @@ const pregunta = document.querySelectorAll('.pregunta');
             })
             bloque[i].classList.add('cambioBB', 'nuevoBB', 'rotate');
         })
-   })
+   }) 
