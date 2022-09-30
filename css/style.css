@@ -195,18 +195,21 @@ body {
   overflow: hidden;
 }
 
-.bloque:hover .pregunta {
+.acordeon .bloque.cambioBB .pregunta{
   border-bottom: 0;
   color: #000;
   font-weight: 700;
 }
+.pregunta:hover{
+  color: red;
+}
 
-.bloque:hover img {
+.acordeon .bloque.rotate .img{
   transform: rotateX(-180deg);
   transition: all 0.5s ease;
 }
 
-.bloque:hover .respuesta {
+.acordeon .bloque.nuevoBB .respuesta {
   height: 7em;
   transition: all 0.5s ease;
   font-size: 0.8em;
