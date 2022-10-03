@@ -190,26 +190,27 @@ body {
   height: 0.7em;
 }
 
+.pregunta:hover {
+  color: red;
+}
+
 .respuesta {
   height: 0;
   overflow: hidden;
 }
 
-.acordeon .bloque.cambioBB .pregunta{
+.bloque.cambioBB .pregunta {
   border-bottom: 0;
   color: #000;
   font-weight: 700;
 }
-.pregunta:hover{
-  color: red;
-}
 
-.acordeon .bloque.rotate .img{
+.bloque.rotate img {
   transform: rotateX(-180deg);
   transition: all 0.5s ease;
 }
 
-.acordeon .bloque.nuevoBB .respuesta {
+.bloque.nuevoBB .respuesta {
   height: 7em;
   transition: all 0.5s ease;
   font-size: 0.8em;
@@ -247,10 +248,6 @@ body {
     width: 450px;
     top: 1em;
     left: -1em;
-  }
-  .bloque:hover .respuesta {
-    height: 5em;
-    font-size: 1em;
   }
 }
 
