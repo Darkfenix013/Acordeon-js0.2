@@ -190,6 +190,10 @@ body {
   height: 0.7em;
 }
 
+.pregunta:hover {
+  color: red;
+}
+
 .respuesta {
   height: 0;
   overflow: hidden;
